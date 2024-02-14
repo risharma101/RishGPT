@@ -1,7 +1,7 @@
 # RishGPT -- A ChatGPT Clone.
 
 #### A fullstack project created using React, Express, and Node, modeling OpenAI's ChatGPT UI. 
-![image](https://github.com/cs35l-group/csco/assets/48577877/0e331320-2500-47f1-89ce-c9b929533168)
+![image]([https://github.com/cs35l-group/csco/assets/48577877/0e331320-2500-47f1-89ce-c9b929533168](https://github.com/risharma101/ChatGPT-Clone/blob/main/assets/demo.png))
 
 
 ## To launch the project:
