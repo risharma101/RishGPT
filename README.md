@@ -52,7 +52,6 @@ This project was built for full-stack experience including frontend development 
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
 _For more examples, please refer to the [Documentation](https://example.com)_
@@ -62,15 +61,19 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 <!-- ROADMAP -->
 ## Roadmap
-
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
+- [X] Replicated ChatGPT UI
+- [X] Added OpenAI API call for chat completions
+- [ ] Change UI to make it more visually aesthetic and user-customizable
+    - [ ] Add various background and text colors which user can choose
+    - [ ] Allow user to change name and title according to their choosing
+- [ ] Add config for easily customizable prompts instead of user changing prompt code themselves
+    - [ ] Add SQL query generation prompt config
+    - [ ] Add cover letter generation prompt config
+    - [ ] Add other common prompt configs
+- [ ] Add script so user can store past interactions on-prem and access later
 
 <!-- CONTRIBUTING -->
 ## Contributing
-
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
@@ -89,17 +92,15 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - rishabhsharma@ucla.edu
+Rishabh Sharma - rishabhsharma@ucla.edu
 
 Project Link: [https://github.com/risharma101/RishGPT](https://github.com/risharma101/RishGPT)
 
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
-
-* []()
-* []()
-* []()
+* FreeCodeCamp for providing tutorial of React, JavaScript, HTML, CSS, and connecting to OpenAI API
+* [README Template](https://github.com/othneildrew/Best-README-Template)
    
 [OpenAI]: https://img.shields.io/badge/OpenAI-412991.svg?style=for-the-badge&logo=OpenAI&logoColor=white
 [OpenAI-url]: https://platform.openai.com/docs/guides/text-generation
