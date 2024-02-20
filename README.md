@@ -16,8 +16,7 @@ RishGPT acts as a clone of OpenAI's ChatGPT but with a custom UI. Currently, the
 
 This project was built for full-stack experience including frontend development with React, HTML, and CSS, and backend development with Express and API calls with OpenAI's Chat Completions API.
 
-### Video demo
-![video](https://github.com/risharma101/ChatGPT-Clone/assets/52262619/d021fe6b-0591-4630-add8-57eb5efe0229)
+
 
 
 ## Getting Started
@@ -52,12 +51,29 @@ This project was built for full-stack experience including frontend development 
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
+- Basic usage is just through entering questions as you would in ChatGPT
+  - Video Demo: ![video](https://github.com/risharma101/ChatGPT-Clone/assets/52262619/d021fe6b-0591-4630-add8-57eb5efe0229)
+- Custom usage: entering specified prompts
+  - Change the message content in `server.js`
+  - eg. for SQL query generation: change line 21 to
+    ```js
+    messages: [{role: "user", content: "Generate an SQL query to " + req.body.message}],
+    ```
+  - eg. for cover letter generation: change line 21 to
+    ```js
+    messages: [{role: "user", content: "Act as a candidate looking for a job. Write me a cover letter for the following role and qualifications " + req.body.message}],
+    ```
+- Increasing response size: in `server.js`, change line 22
+  ```js
+  max_tokens: YOUR_NUM_TOKENS,
+  ```
+  - Note: token limit (including request and response) for gpt-3.5-turbo is 4096
+- Changing model:
+  - if you have a gpt-4 subscription, you can change the model to gpt-4 for better responses
+  - change server.js line 20
+  ```js
+  model: "gpt-4",
+  ```
 
 <!-- ROADMAP -->
 ## Roadmap
@@ -71,6 +87,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
     - [ ] Add cover letter generation prompt config
     - [ ] Add other common prompt configs
 - [ ] Add script so user can store past interactions on-prem and access later
+- [ ] Increase max tokens for larger user messages and responses
 
 <!-- CONTRIBUTING -->
 ## Contributing
