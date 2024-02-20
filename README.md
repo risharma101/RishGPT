@@ -36,7 +36,7 @@ This project was built for full-stack experience including frontend development 
    ```js
    const API_KEY = 'ENTER YOUR API';
    ```
-## Launching
+### Launching
 1. Launch the frontend
    ```sh
    npm run start:frontend
@@ -45,8 +45,8 @@ This project was built for full-stack experience including frontend development 
    ```sh
    npm run start:backend
    ```
-
-[OpenAI]: https://github.com/risharma101/RishGPT/assets/52262619/fb84c1c7-de60-4ce1-a6ae-c29fec342999
+   
+[OpenAI]: https://github.com/risharma101/RishGPT/assets/52262619/1fc08001-e220-49f6-875a-95b2a4a26174
 [OpenAI-url]: https://platform.openai.com/docs/guides/text-generation
 [Express.js]: https://img.shields.io/badge/Express.js-404D59?style=for-the-badge
 [Express-url]: https://expressjs.org/
