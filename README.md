@@ -1,7 +1,9 @@
 # RishGPT 
 #### A Custom ChatGPT UI
 
-![image](assets/chatclone-demo.png =250x)
+![image](assets/chatclone-demo.png)
+<img src="assets/chatclone-demo.png" alt="Image" height="200">
+
 
 ## About this Project
 ### Built With
