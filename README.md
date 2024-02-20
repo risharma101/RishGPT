@@ -46,7 +46,7 @@ This project was built for full-stack experience including frontend development 
    npm run start:backend
    ```
    
-[OpenAI]: https://github.com/risharma101/RishGPT/assets/52262619/1fc08001-e220-49f6-875a-95b2a4a26174
+[OpenAI]: https://img.shields.io/badge/OpenAI-412991.svg?style=for-the-badge&logo=OpenAI&logoColor=white
 [OpenAI-url]: https://platform.openai.com/docs/guides/text-generation
 [Express.js]: https://img.shields.io/badge/Express.js-404D59?style=for-the-badge
 [Express-url]: https://expressjs.org/
