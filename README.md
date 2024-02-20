@@ -16,6 +16,3 @@
   - Run `npm run start:frontend` on the first 
   - Run `npm run start:backend` on the second
   
-* List
-  * hi
-  * 
