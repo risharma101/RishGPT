@@ -1,29 +1,33 @@
 import { useState, useEffect } from "react"
 
 const App = () => {
-  const [value, setValue] = useState(null)
-  const [message, setMessage] = useState(null)
-  const [previousChats, setPreviousChats] = useState([])
-  const [currentTitle, setCurrentTitle] = useState(null)
+  const [value, setValue] = useState(null) // current user message
+  const [message, setMessage] = useState(null) // current model response
+  const [previousChats, setPreviousChats] = useState([]) // history of past interactions
+  const [currentTitle, setCurrentTitle] = useState(null) // title of current interaction string
 
+  // create new chat
   const createNewChat = () => {
     setMessage(null)
     setValue("")
     setCurrentTitle(null)
   }
 
+  // goes to previous message string
   const handleClick = (uniqueTitle) => {
     setCurrentTitle(uniqueTitle)
     setMessage(null)
     setValue("")
   }
 
+  // allows "Enter" key press for sumbmit
   const handleKeyPress = e => {
     if (e.keyCode === 13) {
       getMessages()
     }
   }
 
+  // send user-inputted prompt to backend
   const getMessages = async () => {
     const options = {
       method: "POST",
@@ -45,10 +49,13 @@ const App = () => {
   }
 
   useEffect(() => {
-    // console.log(currentTitle, value, message)
+
+    // set title of current interaction string to first message
     if (!currentTitle && value && message) {
       setCurrentTitle(value)
     }
+
+    // add current interaction to the history of interactions
     if (currentTitle && value && message) {
       setPreviousChats(prevChats => (
         [...prevChats,
@@ -59,8 +66,8 @@ const App = () => {
           },
           {
             title: currentTitle,
-            role: /*"sql " + */message.role,
-            content: message.content/*.toString().split('`')[3].substr(4)*/
+            role: message.role,
+            content: message.content
           }
         
         ]
@@ -69,11 +76,10 @@ const App = () => {
     }
   }, [message, currentTitle])
 
-  // console.log(previousChats)
-  const currentChat = previousChats.filter(previousChat => previousChat.title === currentTitle)
-  const uniqueTitles = Array.from(new Set(previousChats.map(previousChat => previousChat.title)))
-  // console.log(uniqueTitles)
+  const currentChat = previousChats.filter(previousChat => previousChat.title === currentTitle) // current message string
+  const uniqueTitles = Array.from(new Set(previousChats.map(previousChat => previousChat.title))) // history of message strings
 
+  // HTML UI -> attempted to very similarly replicate Open AI's ChatGPT UI
   return (
     <div className="app">
       <section className="side-bar">
@@ -99,9 +105,7 @@ const App = () => {
             <div id="submit" onClick={getMessages}>➢</div>
           </div>
           <p className="info">
-            Rishabh's version of a Chat GPT clone. 
-            This is a project for my resume.
-            Hopefully I can use it for internships.
+            Rishabh's Chat GPT clone! Now I can use my own customized UI for my Chat messages!
           </p>
         </div>
       </section>
